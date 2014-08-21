@@ -19,27 +19,26 @@ Contains project description (this file).
 R script which cleans-up and transforms original data. This script do the following steps:
 
 1. Merges the training and the test sets to create one data set
-..* Downloads data from server
-..* Unzips data in the working directory
-..* Reads training data (X_train.txt, y_train.txt, subject_train.txt)
-..* Reads testing data (X_test.txt, y_test.txt, subject_test.txt)
-..* Merges training and testing data to one data set
+  * Downloads data from server
+  * Unzips data in the working directory
+  * Reads training data (X_train.txt, y_train.txt, subject_train.txt)
+  * Reads testing data (X_test.txt, y_test.txt, subject_test.txt)
+  * Merges training and testing data to one data set
 2. Extracts only the measurements on the mean and standard deviation for each measurement
-..* Reads features file with varaibles names (features.txt)
-..* Extracts only variables containing in the name "mean()" or "std()"
-..* Creates new data set with selected variables (including ActivityNumber and Subject varaibles)
+  * Reads features file with varaibles names (features.txt)
+  * Extracts only variables containing in the name "mean()" or "std()"
+  * Creates new data set with selected variables (including ActivityNumber and Subject varaibles)
 3. Uses descriptive activity names to name the activities in the data set
-..* Reads activities labels from file (activity_labels.txt)
-..* Merges activities names with data set
+  * Reads activities labels from file (activity_labels.txt)
+  * Merges activities names with data set
 4. Appropriately labels the data set with descriptive variable names
-..* Change in labes "mean()" to "Mean" and "std()" to "StdDev"
-..* Remove all "-" from labels
-..* Change variable names to appropriate labels
+  * Change in labes "mean()" to "Mean" and "std()" to "StdDev"
+  * Remove all "-" from labels
+  * Change variable names to appropriate labels
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-..* Melt data (except activity and subject related variables)
-..* Calculate average of each variable for each activity and each subject
-..* Write tidy data to file TidyData.txt
-
+  * Melt data (except activity and subject related variables)
+  * Calculate average of each variable for each activity and each subject
+  * Write tidy data to file TidyData.txt
 
 ##TidyData.txt
 Independent tidy data set with the average of each variable for each activity and each subject which was produced by run_analysis.R script.
